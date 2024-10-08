@@ -1,0 +1,231 @@
+/* General Body Styling */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.container {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    width: 100%;
+    border: 2px solid #D8D8DD;
+    border-radius: 10px;
+    max-width: 1200px; /* Prevents the resume from getting too wide */
+}
+
+/* Education and Work Experience Section Styling */
+.education, .work-experience, .skills {
+    margin-top: 20px; /* Add space between sections */
+}
+
+/* Flexbox for Education Items */
+.education-item {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between the elements */
+    padding: 9px 0; /* Optional: add vertical padding for spacing */
+}
+
+.year {
+    flex: 1; /* Allow the year span to grow */
+    text-align: left; /* Align text to the left */
+}
+
+.degree {
+    flex: 2; /* Allow the degree span to take more space */
+    text-align: left; /* Align text to the left */
+}
+
+.percentage {
+    flex: 1; /* Allow the percentage span to grow */
+    text-align: right; /* Align text to the right */
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+/* Columns Setup */
+.columns {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping for print */
+}
+
+/* General Heading Styles */
+h1, h2, h3, h4 {
+    color: #2F3866;
+}
+
+/* First Column Styling */
+.col_01 {
+    border-radius: 3px;
+    /* border: 1px solid; */
+    width: 30%; /* Set the width for the first column */
+    padding: 1px;
+    box-sizing: border-box;
+    
+    /* Ensure padding doesn't affect total width */
+}
+
+.col_01 h1, .col_01 h2, .col_01 p {
+    padding-left: 14px;
+}
+
+.col_01 h3 {
+    color: black;
+    padding-left: 14px;
+}
+
+.col_01 p {
+    padding-top: 5px;
+}
+
+/* Second Column Styling */
+.col_02 {
+    border: 1px solid #D8D8DD;
+    width: 70%; /* Set the width for the second column */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.col_02 h1 {
+    padding-left: 40px;
+}
+
+.col_02 h3 {
+    text-align: center;
+}
+
+.col_02 h1 {
+    padding-top: 20px;
+    font-size: 39px;
+}
+
+.col_02 h2 {
+    padding-top: 20px; 
+    font-size: 30px;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #182775;
+    color: white;
+    border: inherit;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7E7F81;
+}
+
+/* Media Query for Tablets (Portrait) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .columns {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .col_01, .col_02 {
+        width: 100%; /* Full width on smaller screens */
+    }
+    .col_02 h1 {
+        text-align: center;
+    }
+
+    button {
+        width: 100%; /* Button takes full width */
+    }
+}
+
+/* Adjustments for screens wider than 1366 pixels */
+@media (min-width: 1364px) {
+    .container {
+        width: 70%; /* Slightly reduce the width for larger screens */
+    }
+   
+
+    .col_01 {
+        width: 30%; /* Ensure columns stay aligned */
+    }
+
+    .col_02 {
+        width: 70%; /* Ensure columns stay aligned */
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .col_02 h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 120px; 
+    }
+
+    button {
+        width: 100%; /* Button takes full width */
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact; /* Ensures colors are printed accurately */
+        color-adjust: exact; /* Ensures colors are printed accurately */
+    }
+
+    .container {
+         /* Remove border for a cleaner print */
+        width: 100%; /* Use full width for printing */
+    }
+
+    .columns {
+        display: flex; /* Keep columns side by side */
+        flex-direction: row; /* Ensure columns stay aligned */
+        justify-content: space-between; /* Add spacing between columns */
+    }
+
+    .col_01 {
+        width: 32%; /* Set both columns to take half the width */
+        box-sizing: border-box; /* Ensure padding doesn't affect total width */
+    }
+    .col_02{
+        width: 68%;
+        box-sizing: border-box;
+    }
+
+    /* Hide buttons during print */
+    button {
+        display: none;
+    }
+
+    /* Remove any unwanted padding/margins */
+     h2, h3, h4, p {
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        text-align: center;
+        padding: 3px;
+        margin: 0;
+        padding: 0;
+    }
+}
