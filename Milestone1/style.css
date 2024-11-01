@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+}
+
+body {
+  font-family: 'Segoe UI', Verdana;
+ 
+  padding: 20px;
+}
+
+.cv-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  flex-wrap: wrap; /* Allow the layout to wrap */
+}
+
+.left-sidebar {
+  background-color: #0a1647f5;
+  color: white;
+  width: 35%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile_pic {
+  width: 70%;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 35px;
+  margin-bottom: 10px; /* Added margin to separate from text */
+}
+
+.about-me,
+.skills {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  background-color: white;
+  color:#0a1647f5;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 1rem; /* Changed font-size to 1rem */
+}
+
+.skills ul {
+  margin-top: 10px;
+}
+
+.main-content {
+  width: 65%;
+  padding: 20px;
+}
+
+.personal-info h1 {
+  color: #0a1647f5;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  text-align: center; /* Center the name for better visibility on mobile */
+}
+
+.personal-info p {
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.5rem; /* Changed font-size to 1.5rem for better mobile readability */
+  word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.experience h2,
+.education h2,
+.skills-summary h2 {
+  background-color: #0a1647f5;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.education1{
+  margin-bottom: 15px;
+}
+
+.education1 h3,
+ h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.education1 span {
+  display: block;
+  font-size: 0.9.9rem;
+  color: #777777;
+  margin-bottom: 5px;
+}
+
+.skill {
+  background-color:#0a1647f5;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* Hidden Class for Toggle */
+.hidden {
+  display: none;
+}
+
+/* Button Styling */
+.toggle-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0a1647f5;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0a1647f5;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .left-sidebar {
+    padding: 10px; /* Adjusted padding */
+    width: 40%; /* Full width for mobile */
+  }
+
+  .profile-pic {
+    width: 40%; /* Adjusted width for profile picture */
+    margin: 0 auto; /* Centered on the page */
+  }
+
+  .main-content {
+    padding: 10px; /* Adjusted padding */
+    width: 60%; /* Full width for mobile */
+  }
+
+  .cv-container {
+    margin: 10px; /* Adjusted margin */
+  }
+
+  .personal-info h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .personal-info p {
+    font-size: 1rem; /* Smaller font size for mobile */
+    word-wrap: break-word; /* Ensure long text wraps correctly */
+  }
+
+  /* Ensure the email is visible and styled correctly */
+  .email {
+    font-size: 1rem; /* Appropriate size for email */
+    display: block; /* Ensure it takes full width */
+    text-align: center; /* Center-align for better aesthetics */
+    margin-top: 10px; /* Add margin for spacing */
+    word-wrap: break-word; /* Break long email addresses */
+  }
+  
+
+}
+
